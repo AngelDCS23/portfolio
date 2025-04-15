@@ -1,0 +1,284 @@
+:root {
+    --fondoClaro: #EAEAEA;
+    --fondoOscuro: #171717;
+    --textoOscuro: #555555;
+    --eduCircleColor: var(--textoOscuro);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Outfit", sans-serif;
+}
+
+html, body {
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--fondoClaro);
+    scroll-behavior: smooth;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+html,body.dark-mode {
+    --fondoClaro: #121212;
+    --textoOscuro: #f1f1f1;
+    --eduCircleColor: #f1f1f1;
+}
+
+.central50{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.menu{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: end;
+    gap: 20px;
+}
+
+.menu a{
+    text-decoration: none;
+    font-size: 20px;    
+    font-weight: 400;
+    color: var(--textoOscuro);
+    transition: all 0.3s ease-in-out;
+}
+
+.menu img{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.personalData{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.basicInfo{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+.basicInfo h1,h2,p{
+    color: var(--textoOscuro);
+}
+
+.basicInfo h1{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.basicInfo h2{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.basicInfo p{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.basicInfo img{
+    width: 16px;
+    height: 16px;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.rightImg{
+    display: flex;
+    gap: 5px;
+}
+
+.right p{
+    font-size: 15px !important;
+    font-weight: 400 !important;
+}
+
+.aboutme{
+    font-size: 20px;
+    font-weight: 400;
+}
+    
+
+.socialLink{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.socialDiv{
+    width: 25%;
+    background-color: var(--textoOscuro);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.socialDiv p{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--fondoClaro);
+}
+
+.experience{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.exp{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px 0px 15px 10px;
+    border-left: 2px solid var(--textoOscuro);
+}
+
+.title{
+    width: 100%;
+    text-align: end;
+    font-size: 15px !important;
+}
+
+.titleT{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.subtitle{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.description{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.skillsExp{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.skillDiv{
+    background-color: var(--textoOscuro);
+    padding: 10px 5px;
+    text-align: center;
+    border-radius: 5px;
+    min-width: 8%;
+}
+
+.skillDiv p{
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--fondoClaro);
+}
+
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(8%, 1fr));
+    gap: 0.5rem;
+}
+
+.education{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.eduRow{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.eduCircle{
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    background-color: var(--eduCircleColor);
+}
+
+.aboutCircle{
+    width: 130px; 
+    height: 130px; 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--textoOscuro);
+}
+
+.aboutCircle img{
+    width: 70%;
+    height: 70%;
+}
+
+.eduData{
+    width:85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.eduDate{
+    width: 15%;
+}
+
+.eduDate p{
+    font-size: 16px;
+    font-weight: 400;
+    text-align: end;
+}
+
+.eduTitle{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+
+.footerDiv{
+    width: 100%;
+    margin: 40px 0px;
+}
