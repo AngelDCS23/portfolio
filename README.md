@@ -5,23 +5,22 @@ Este es mi portafolio profesional desarrollado con Laravel. Aquí podrás encont
 ## 🚀 Tecnologías utilizadas
 
 - Laravel (Framework PHP)
-- [Aquí puedes agregar otras tecnologías: TailwindCSS, Livewire, MySQL, etc.]
+- MySQL,JavaScript
 
 ## 💡 Funcionalidades
 
 - Listado de proyectos destacados
 - Tecnologías que manejo
 - Experiencia laboral / puestos ocupados
-- [Puedes agregar más si hay otras secciones o funcionalidades]
 
-## 🛠️ Instalación (opcional)
+## 🛠️ Instalación
 
 ```bash
-git clone https://github.com/tu-usuario/portfolio.git
+git clone git@github.com:AngelDCS23/portfolio.git
 cd portfolio
 composer install
 cp .env.example .env
 php artisan key:generate
 # Configura tu base de datos en .env
-php artisan migrate --seed
+php artisan migrate
 php artisan serve
