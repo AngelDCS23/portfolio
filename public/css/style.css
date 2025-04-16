@@ -1,5 +1,7 @@
 :root {
     --fondoClaro: #EAEAEA;
+    --fondoClaro2: #EAEAEA;
+    --resTextoposcuro: #555555;
     --fondoOscuro: #171717;
     --textoOscuro: #555555;
     --eduCircleColor: var(--textoOscuro);
@@ -35,6 +37,14 @@ html,body.dark-mode {
     display: flex;
     flex-direction: column;
     gap: 40px;
+}
+
+.infoRow{
+    display: none;
+}
+
+.menuMobile{
+    display: none;
 }
 
 .menu{
@@ -134,6 +144,32 @@ html,body.dark-mode {
     cursor: pointer;
 }
 
+.socialDiv:hover {
+    background-color: var(--fondoOscuro);
+    transition: 1s;
+}
+
+.dark-mode .socialDiv:hover {
+    background-color: var(--fondoClaro2);
+    transition: 1s;
+}
+
+.dark-mode .socialDiv:hover .spanEmail {
+    color: #ea4133;
+    transition: 1s;
+}
+
+.dark-mode .socialDiv:hover .spanGithub {
+    color: #822391;
+    transition: 1s;
+}
+
+.dark-mode .socialDiv:hover .spanLinkedin {
+    color: #0167c7;
+    transition: 1s;
+}
+
+
 .socialDiv p{
     font-size: 18px;
     font-weight: 400;
@@ -230,6 +266,8 @@ html,body.dark-mode {
     gap: 10px;
     width: 100%;
     cursor: pointer;
+    padding: 15px 0px 15px 10px;
+    border-left: 2px solid var(--textoOscuro);
 }
 
 .eduCircle{
@@ -282,3 +320,344 @@ html,body.dark-mode {
     width: 100%;
     margin: 40px 0px;
 }
+
+.contact-btn {
+    position: fixed;
+    display: flex;
+    bottom: 20px;     
+    right: 20px;     
+    justify-content: center;
+    background-color: var(--textoOscuro);  
+    padding: 10px 20px;  
+    border-radius: 5px;
+    border: 1px solid  var(--textoOscuro);
+    text-align: center; 
+    font-size: 16px;  
+    text-decoration: none;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+    z-index: 9999;   
+    transition: background-color 0.3s ease;  
+    cursor: pointer;
+}
+
+.contact-btn p{
+    color: var(--fondoClaro);  
+}
+
+.contact-btn:hover {
+    background-color: var(--fondoOscuro);
+    color: var(--fondoClaro);
+    transition: 1s;
+}
+
+.dark-mode .contact-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Blanco con transparencia */
+    backdrop-filter: blur(10px); /* Aplica el desenfoque */
+    -webkit-backdrop-filter: blur(10px); /* Para compatibilidad con Safari */
+    transition: background-color 1s, backdrop-filter 1s;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Opcional: para mejor efecto de vidrio */
+}
+
+.dark-mode .contact-btn:hover p{
+    color: white;  
+    transition: 1s;
+}
+
+.contact-btn img{
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .central50 {
+      width: 90%;
+      gap: 20px;
+    }
+
+    .contact-btn{
+        display: none;
+    }
+  
+    /*
+    .menu {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+      */
+
+    .menu{
+        display: none;
+    }
+
+    .socialLink{
+        display: none;
+    }
+
+    .men{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    .aboutCircle2{
+        width: 60px; 
+        height: 60px; 
+        border-radius: 50%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--textoOscuro);
+    }
+
+    .aboutCircle2 img{
+        width: 50%;
+        height: 50%;
+    }
+
+    .menuMobile{
+        display: flex;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: calc(100vw + 1px);
+        margin-left: calc(-5vw - 1px);
+        margin-right: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 20px 0px;
+        z-index: 1000;
+        background-color: rgba(234, 234, 234, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        margin-top: 0px;
+    }
+  
+    .menuMobile a {
+      font-size: 18px;
+    }
+
+    .menuMobile img {
+        width: 30px;
+        height: 30px;
+    }
+  
+    .basicInfo {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+  
+    .basicInfo h1 {
+      font-size: 24px;
+    }
+  
+    .basicInfo h2 {
+      font-size: 18px;
+    }
+  
+    .basicInfo p {
+      font-size: 14px;
+    }
+  
+    .right {
+      gap: 2px;
+    }
+  
+    .socialLink {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+  
+    .socialDiv {
+      width: 90%;
+    }
+  
+    .skillsGrid {
+      grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    }
+  
+    .eduRow {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .eduCircle {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+  
+    .aboutCircle {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .eduData,
+    .eduDate {
+      width: 100%;
+      text-align: left;
+    }
+  
+    .eduDate p {
+      text-align: left;
+    }
+  
+    .contact-btn {
+      right: 10px;
+      bottom: 10px;
+      padding: 8px 16px;
+      font-size: 14px;
+      gap: 5px;
+    }
+  
+    .contact-btn img {
+      width: 14px;
+      height: 14px;
+      margin-right: 5px;
+    }
+  
+    .description {
+      font-size: 16px;
+    }
+
+    .aboutme{
+        text-align: center;
+    }
+  
+    .titleT {
+      font-size: 18px;
+    }
+  
+    .subtitle {
+      font-size: 12px;
+    }
+  
+    .skillDiv {
+      min-width: auto;
+      flex: 1;
+    }
+  
+    .skillDiv p {
+      font-size: 9px;
+    }
+
+    .skillsExp {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        margin-top: 5px;
+        overflow-x: auto; /* scroll horizontal */
+        -webkit-overflow-scrolling: touch; /* suaviza en iOS */
+        scroll-behavior: smooth;
+    }
+    
+    .skillsExp::-webkit-scrollbar {
+        display: none; /* oculta el scroll en navegadores con webkit */
+    }
+
+    .rightImg{
+        justify-content: center;
+    }
+
+    .menu-toggle,
+    .side-menu {
+        display: none;
+    }
+
+    .sideMenuMobile{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .sideMenuMobile p{
+        color: var(--fondoClaro2);
+        font-size: 25px;
+    }
+
+    .infoRow{
+        display: flex;
+        gap: 10px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .infoRow img{
+        width: 24px;
+        height: 24px;
+    }
+
+    .infoRow p{
+        font-size: 15px;
+        font-weight: 400;
+    }
+  }
+  
+  .menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+  }
+  
+  .side-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100%;
+    background-color: rgba(23, 23, 23, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 9998;
+    transition: left 0.3s ease;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .side-menu.open {
+    left: 0;
+  }
+  
+  .menu-header {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .menu-header button{
+    all: unset;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .logo {
+    width: 100px;
+  }
+  
+  .menu-items a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 0;
+  }
+  
+  .menu-items a:hover {
+    color: #00aaff;
+  }
+  

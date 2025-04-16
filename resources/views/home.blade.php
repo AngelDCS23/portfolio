@@ -12,7 +12,7 @@
         const SolClaro = "{{ asset('img/iconos/sol.png') }}";
         const dinoOsc = "{{ asset('img/iconos/dinoOs.png') }}";
         const dinoCla = "{{ asset('img/iconos/dinoCla.png') }}";
-      </script>
+    </script>
 
     <title>Ángel De Cara Salas</title>
 </head>
@@ -25,6 +25,34 @@
             <a href="#skills">{{ $menu->men4 }}</a>
             <a href="#education">{{ $menu->men5 }}</a>
             <img src="{{ asset('img/iconos/luna.png') }}" class="socialIcon" onclick="toggleDarkMode()" id="visualModeButton">
+        </div>
+
+        <div class="menuMobile">
+            <div class="men">
+                <img src="{{ asset('img/iconos/menuOsc.png') }}" alt="" onclick="openMenu()">
+                <img src="{{ asset('img/iconos/luna.png') }}" class="socialIcon" onclick="toggleDarkMode()" id="visualModeButton">
+            </div>
+        </div>
+
+        <div id="sideMenu" class="side-menu">
+            <div class="menu-header">
+                <button onclick="closeMenu()">✕</button>
+            </div>
+            <div class="sideMenuMobile">
+                <p>Contact information</p>
+                <div class="infoRow" onclick="window.location.href='mailto:me@angeldcs.dev'">
+                    <img src="{{ asset('img/iconos/sobre.png') }}" alt="">
+                    <p>Email</p>
+                </div>
+                <div class="infoRow" onclick="window.open('https://github.com/AngelDCS23', '_blank')">
+                    <img src="{{ asset('img/iconos/github.png') }}" alt="">
+                    <p>GitHub</p>
+                </div>
+                <div class="infoRow" onclick="window.open('https://www.linkedin.com/in/%C3%A1ngel-de-cara-salas-413078227/', '_blank')">
+                    <img src="{{ asset('img/iconos/linkedin.png') }}" alt="">
+                    <p>Linkedin</p>
+                </div>
+            </div>
         </div>
 
         <div class="personalData" id="about">
@@ -51,13 +79,13 @@
             </div>
             <div class="socialLink">
                 <div class="socialDiv" onclick="window.location.href='mailto:me@angeldcs.dev'">
-                    <p>{{$person->email}}</p>
+                    <p><span class="spanEmail">{{$person->emailSpan}}</span>{{$person->email}}</p>
                 </div>
                 <div class="socialDiv" onclick="window.open('https://github.com/AngelDCS23', '_blank')">
-                    <p>{{$person->github}}</p>
+                    <p><span class="spanGithub">{{$person->githubSpan}}</span>{{$person->github}}</p>
                 </div>
                 <div class="socialDiv" onclick="window.open('https://www.linkedin.com/in/%C3%A1ngel-de-cara-salas-413078227/', '_blank')">
-                    <p>{{$person->linkedin}}</p>
+                    <p><span class="spanLinkedin">{{$person->linkedinSpan}}</span>{{$person->linkedin}}</p>
                 </div>
             </div>
         </div>   
@@ -124,7 +152,6 @@
             </div>
             @foreach ($education as $edu)
                 <div class="eduRow" onclick="window.open('{{$edu->web}}', '_blank')">
-                    <div class="eduCircle"></div>
                     <div class="eduData">
                         <p class="titleT">{{$edu->title}}</p>
                         <p class="eduTitle">{{$edu->subtitle}}</p>
@@ -135,13 +162,27 @@
                 </div>
             @endforeach
         </div>
-
         <footer>
             <div class="footerDiv">
                 <p>© 2025 - Ángel De Cara Salas</p>
             </div>
-
         </footer>
+
+    </div>
+    <div class="contact-btn" onclick="window.location.href='mailto:me@angeldcs.dev'">
+        <p>Contact Me</p>
     </div>
 </body>
+
+<script>
+    function openMenu() {
+      document.getElementById('sideMenu').classList.add('open');
+    }
+  
+    function closeMenu() {
+      document.getElementById('sideMenu').classList.remove('open');
+    }
+  </script>
+
+
 </html>

@@ -15,6 +15,9 @@ class person extends Model{
         'email',
         'github',
         'linkedin',
+        'emailSpan',
+        'githubSpan',
+        'linkedinSpan',
         'image'
     ];
 
